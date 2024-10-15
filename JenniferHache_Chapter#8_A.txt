@@ -1,0 +1,157 @@
+Name: Jennifer Hache
+Date: 10/13/24 - 10/15/2024
+
+Description: 
+This program will ask the instructor how many students they would like to store 3 exam grades  in a file named grades.csv.
+Program will ask user to enter each student’s first name and last name as strings and the student’s three exam grades as integers.
+Then on a separate program, program will read the grades.csv file and display the data in tabular format.
+
+
+Logic Steps:
+
+1. Important CSV module to access CSV files.
+
+2. Define a function - student_grades()
+	2a. Responsible to collecting a storing the grades
+
+3. Ask instructor for the number of students
+	3a. input the number of students whose grades will be recorded.
+
+4. Open CSV file
+	4a. a with statement will open a new CSV file called grades.csv in write ("w) mode.
+
+5. Create a CSV writer object 
+	5a. Used to write rows to the CSV file for display reasons.
+	
+6. Create a header row
+	6a. Columns : "First Name", "Last Name", "Exam 1", "Exam 2", "Exam 3".
+
+7. Use a for loop to iterate over the number of students
+	7a. Ask for full name and 3 exam grades. 
+
+8. Add a message letting the user know that the info was stored in CSV file.
+
+9. Use an if __name__ == "__main__"
+	9a. This will ensure the program runs correctly.
+
+Variables Used
+
+1. num_students: Stores the number of students to enter.
+
+2. first_name: Stores the first name of each student.
+
+3. last_name: Stores the last name of each student.
+
+4. exam1: Stores the grade for Exam 1.
+
+5. exam2: Stores the grade for Exam 2.
+
+6. exam3: Stores the grade for Exam 3.
+
+Functions
+
+1. student_grades()
+Desc: Collects student names and exam grades from user input and writes them to a CSV file.
+Parameters: None
+Returns: none
+
+2. input()
+Desc: Prompts the user for input.
+Parameters: none
+Returns: string from input
+
+3. int(x)
+Desc: Converts the input x to an integer
+Parameters: none
+Returns: Integer value from x
+
+4. open(filename, mode, newline='')
+Desc: Opens a file with the specified filename in ("w") - writing
+Parameters: None
+Returns: file object
+
+5. with Statement
+Desc: file is properly closed
+Parameters: none
+Returns: none
+
+6. csv.writer(csvfile)
+Desc:  Creates a writer object
+Parameters: none
+Returns: CSV writer object
+
+7. csvwriter.writerow(row)
+Desc: Writes a row to the CSV file
+Parameters: None
+Returns: none
+
+--------------------------------------------
+logical steps for import csv (read_grades)
+
+1. Import CSV module to access the libraries.
+
+2. Create a function named read_grades()
+
+3. Open CSV File
+	3a. The with statement will open the grades.csv in read mode.
+
+4. Use csv.reader(file) to create a reader object 
+
+5. Call next(csvreader) to read the first row
+	5a. this will contain the headers.
+
+6. Print a header and separation line
+	6. This will help with readability and display 
+
+7. Loop through each row in the csv reader and print the data.
+
+
+Variables Used for import csv (read_grades)
+
+1. file: 
+Desc: File object for reading the CSV
+
+2. csv reader: 
+Desc: CSV reader object for iterating over the file.
+
+3. header: 
+Desc: Stores the header row from the CSV.
+
+4. row:
+Desc:  Represents each individual row of data in the CSV during iteration.
+
+
+
+Functions Used for import csv (read_grades)
+
+1. open():
+Desc:  Opens the CSV file for reading
+Parameters:
+	a. file: The name of the file to open (in this case, 'grades.csv').
+	b. mode: "r" reading.
+Returns: A file object that allows you to read from/write to the file.
+
+2. csv.reader()
+Desc: Creates a CSV reader object from the file
+Parameters:
+	a.file: The file object created by open().
+Returns: A CSV reader object that allows you to iterate over lines in the CSV file as lists of strings.
+
+3. next()
+Desc: Retrieves the next row from the CSV reader and returns the first row which is the header.
+Parameters:
+	a. csvreader: reader object
+Returns: The next item from the iterator, which in this case is the first row of the CSV (the header).
+
+4. print()
+Parameters:
+	a. Any string to output
+Returns: None.
+
+----------------------
+
+
+https://github.com/Jhache06/JenniferHache_Chapter-8_A.git
+
+Name: Jennifer Hache
+Date: 10/15/2024
